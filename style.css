@@ -353,8 +353,8 @@ body {
 }
 
 .video-overlay h2 {
-  color: var(--gold);
-  font-size: clamp(2rem, 4vw, 3rem);
+  color: #c9a84c;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
