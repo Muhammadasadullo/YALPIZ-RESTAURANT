@@ -1,16 +1,16 @@
 /* Base Layout & Theme */
 body {
     font-family: 'Georgia', serif;
-    background-color: #0d131a; /* Rich, dark corporate background */
+    background-color: #0d131a;
     color: #e2e8f0;
     margin: 0;
     padding: 0;
-    padding-bottom: 70px; /* Prevents sticky nav from blocking content */
+    padding-bottom: 70px;
 }
 
 .brand-header {
     background: linear-gradient(180deg, #16222f 0%, #0d131a 100%);
-    color: #dfb76c; /* Luxury Gold Tone */
+    color: #dfb76c;
     padding: 50px 20px 30px 20px;
     text-align: center;
     border-bottom: 1px solid #233549;
@@ -70,7 +70,9 @@ body {
     color: #dfb76c;
     border-bottom: 1px solid #233549;
     padding-bottom: 10px;
+    margin-top: 40px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .menu-item {
@@ -80,6 +82,11 @@ body {
     margin-bottom: 20px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.premium-item {
+    border: 1px solid #dfb76c;
+    position: relative;
 }
 
 .menu-item img {
@@ -94,15 +101,19 @@ body {
 
 .menu-item h3 {
     margin: 0 0 8px 0;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: #fff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .price {
     color: #dfb76c;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .menu-item p {
@@ -112,7 +123,7 @@ body {
     line-height: 1.5;
 }
 
-/* Hafız Mustafa Styled Accordion Footer */
+/* Accordion Footer */
 .enterprise-footer {
     background-color: #080c10;
     padding: 40px 20px;
@@ -144,7 +155,7 @@ body {
     font-size: 1.05rem;
     color: #cbd5e1;
     cursor: pointer;
-    list-style: none; /* Hides default triangle */
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,10 +163,9 @@ body {
 }
 
 .footer-accordion summary::-webkit-details-marker {
-    display: none; /* Hides Safari default arrow */
+    display: none;
 }
 
-/* Flips plus icon to a dash style animation when open */
 .footer-accordion[open] summary i {
     transform: rotate(45deg);
     color: #dfb76c;
@@ -212,7 +222,7 @@ body {
     margin-top: 30px;
 }
 
-/* Floating WhatsApp Button Implementation */
+/* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
     bottom: 85px;
