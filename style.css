@@ -1,82 +1,265 @@
+/* Base Layout & Theme */
 body {
     font-family: 'Georgia', serif;
-    background-color: #fdfbf7;
-    color: #2c3e50;
+    background-color: #0d131a; /* Rich, dark corporate background */
+    color: #e2e8f0;
     margin: 0;
     padding: 0;
+    padding-bottom: 70px; /* Prevents sticky nav from blocking content */
+}
+
+.brand-header {
+    background: linear-gradient(180deg, #16222f 0%, #0d131a 100%);
+    color: #dfb76c; /* Luxury Gold Tone */
+    padding: 50px 20px 30px 20px;
     text-align: center;
+    border-bottom: 1px solid #233549;
 }
 
-header {
-    background-color: #111a24;
-    color: #dfb76c; /* Warm gold tone for a luxury fine-dining ambiance */
-    padding: 50px 20px;
-}
-
-header h1 {
+.brand-header h1 {
     margin: 0;
-    font-size: 3rem;
-    letter-spacing: 4px;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+    font-weight: 400;
 }
 
-header p {
-    margin: 12px 0 0 0;
+.tagline {
+    margin: 10px 0 0 0;
     font-style: italic;
-    color: #fff;
-    opacity: 0.8;
-    font-size: 1.1rem;
+    color: #94a3b8;
+    font-size: 1rem;
 }
 
-.menu-container {
+.main-wrapper {
     padding: 20px 15px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.menu-section h2 {
-    font-size: 2rem;
-    color: #111a24;
-    border-bottom: 2px solid #dfb76c;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-top: 45px;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
+/* Premium Component Cards */
+.action-card {
+    background: #16222f;
+    border: 1px solid #233549;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.menu-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.action-card h2 {
+    color: #dfb76c;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #dfb76c;
+    color: #0d131a;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
     width: 100%;
+}
+
+/* Modernized Menu Grid Layout */
+.menu-section h2 {
+    font-size: 1.8rem;
+    color: #dfb76c;
+    border-bottom: 1px solid #233549;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .menu-item {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    margin-bottom: 30px;
-    width: 100%;
+    background: #111923;
+    border-radius: 10px;
+    border: 1px solid #1e2d3d;
+    margin-bottom: 20px;
     overflow: hidden;
-    text-align: left;
-    border: 1px solid #eae5da;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .menu-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover; /* Ensures food graphics don't squash or distort */
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-item-info {
+    padding: 15px;
 }
 
 .menu-item h3 {
-    margin: 18px 20px 6px 20px;
-    font-size: 1.4rem;
-    color: #111a24;
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: #dfb76c;
+    font-size: 1.2rem;
 }
 
 .menu-item p {
-    margin: 0 20px 20px 20px;
-    color: #555;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Hafız Mustafa Styled Accordion Footer */
+.enterprise-footer {
+    background-color: #080c10;
+    padding: 40px 20px;
+    border-top: 1px solid #1e2d3d;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 25px;
+}
+
+.social-links a {
+    color: #dfb76c;
+    font-size: 1.6rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-accordion {
+    border-bottom: 1px solid #1e2d3d;
+    text-align: left;
+    background: #0b1117;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.footer-accordion summary {
+    padding: 15px;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    list-style: none; /* Hides default triangle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer-accordion summary::-webkit-details-marker {
+    display: none; /* Hides Safari default arrow */
+}
+
+/* Flips plus icon to a dash style animation when open */
+.footer-accordion[open] summary i {
+    transform: rotate(45deg);
+    color: #dfb76c;
+}
+
+.accordion-content {
+    padding: 10px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background: #080c10;
+}
+
+.accordion-content a {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 8px 0;
     font-size: 0.95rem;
-    line-height: 1.6;
+}
+
+/* Security & Trust Token Bar */
+.trust-badge-container {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1e2d3d;
+}
+
+.ssl-badge {
+    font-size: 0.85rem;
+    color: #10b981;
+    margin-bottom: 15px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: #64748b;
+}
+
+.badge-text {
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #334155;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #475569;
+    margin-top: 30px;
+}
+
+/* Floating WhatsApp Button Implementation */
+.whatsapp-float {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 999;
+    text-decoration: none;
+}
+
+/* Persistent Mobile Bottom Navigation Dock */
+.sticky-nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: #0b1117;
+    border-top: 1px solid #1e2d3d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #64748b;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.nav-link span {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.nav-link.active {
+    color: #dfb76c;
 }
